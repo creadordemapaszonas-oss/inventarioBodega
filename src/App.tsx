@@ -126,6 +126,23 @@ function App() {
     console.log('Datos a guardar:', );
     guardarInventario(formInventario)
     alert('¡Formulario listo para enviarse a Google Apps Script!');
+    setFormInventario({
+      esNuevo: false,
+      numeroSerie: '',
+      modelo: '',
+      estadoBodega: 'Disponible',
+      fechaRecepcion: new Date().toISOString().split('T')[0], // Fecha actual por defecto
+      ubicacionBodega: '',
+      fechaInstalacion: '',
+      fechaBaja: '',
+      motivoBaja: '',
+      observaciones: '',
+      puntoAtencion: '',
+      ubicacion: '',
+    })
+    setEsModeloNuevo(false)
+    setModeloSeleccionado("")
+    setInfoModelo(null)
   };
 
   return (
